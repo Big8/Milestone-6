@@ -25,6 +25,10 @@
                         <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home"/>
                         <asp:MenuItem NavigateUrl="~/About.aspx" Text="About"/>
                         <asp:MenuItem NavigateUrl="~/CUSTOMERS/CUSTOMERS.aspx" Text="Customers" Value="Customers"></asp:MenuItem>
+                        <asp:MenuItem Text="Product" Value="Product"></asp:MenuItem>
+                        <asp:MenuItem Text="Ingredient" Value="Ingredient"></asp:MenuItem>
+                        <asp:MenuItem Text="Monthly Revenue" Value="Monthly Revenue"></asp:MenuItem>
+                        <asp:MenuItem Text="Equipment" Value="Equipment"></asp:MenuItem>
                     </Items>
                 </asp:Menu>
             </div>
