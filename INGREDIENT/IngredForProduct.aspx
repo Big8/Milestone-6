@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="VB" MasterPageFile="~/Site.master" %>
+﻿<%@ Page Title="Ingredient for Products" Language="VB" MasterPageFile="~/Site.master" %>
 
 <script runat="server">
 

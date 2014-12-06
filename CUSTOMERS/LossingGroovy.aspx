@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="VB" MasterPageFile="~/Site.master" %>
+﻿<%@ Page Title="Lossing Groovy Events Customers" Language="VB" MasterPageFile="~/Site.master" %>
 
 <script runat="server">
 
