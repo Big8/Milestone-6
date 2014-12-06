@@ -1,4 +1,4 @@
-﻿<%@ Page Title="CUSTOMERS" Language="VB" MasterPageFile="~/Site.master" %>
+﻿<%@ Page Title="" Language="VB" MasterPageFile="~/Site.master" %>
 
 <script runat="server">
 
@@ -7,7 +7,17 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" Runat="Server">
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Provider=MSDAORA;Data Source=delphi;Password=DataRocks;User ID=MS320076" ProviderName="System.Data.OleDb" SelectCommand="SELECT CFT.&quot;Customer Name&quot;, S.StoreName as &quot;Store Name&quot;, CFT.&quot;# Catering Events&quot;, CFT.&quot;Total Cost&quot;, CFT.&quot;Total Price&quot;
+FROM (SELECT CT.ContactFName|| ' ' ||CT.ContactLName as &quot;Customer Name&quot;, CT.StoreID, Count(*) as &quot;# Catering Events&quot;, SUM(CT.NumberAttendees*CT.CostPerPlate) as &quot;Total Cost&quot;, SUM(CT.NumberAttendees*CT.PricePerPlate) as &quot;Total Price&quot;
+      FROM (Select E.EventID, E.ContactLName, E.ContactFName, E.StoreID, CE.NumberAttendees, CE.CostPerPlate, CE.PricePerPlate
+            FROM Event E, CateringEvents CE
+            WHERE E.EventID=CE.EventID AND E.EventStartDate&lt;=(SYSDATE-21)
+            ) CT
+      Group By CT.ContactLName, CT.ContactFName, CT.StoreID
+      Having Count(*) BETWEEN '1' AND '5'
+      ) CFT, Stores S
+WHERE S.StoreID=CFT.StoreID"></asp:SqlDataSource>
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None">
         <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
         <Columns>
             <asp:BoundField DataField="Customer Name" HeaderText="Customer Name" SortExpression="Customer Name" />
@@ -27,6 +37,5 @@
         <SortedDescendingCellStyle BackColor="#FFFDF8" />
         <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
     </asp:GridView>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Provider=MSDAORA;Data Source=delphi;Persist Security Info=True;Password=DataRocks;User ID=MS320076" ProviderName="System.Data.OleDb" SelectCommand="SELECT CFT.&quot;Customer Name&quot;, S.STORENAME AS &quot;Store Name&quot;, CFT.&quot;# Catering Events&quot;, CFT.&quot;Total Cost&quot;, CFT.&quot;Total Price&quot; FROM (SELECT CONTACTFNAME, CONTACTLNAME AS &quot;Customer Name&quot;, STOREID, COUNT(*) AS &quot;# Catering Events&quot;, SUM(NUMBERATTENDEES * COSTPERPLATE) AS &quot;Total Cost&quot;, SUM(NUMBERATTENDEES * PRICEPERPLATE) AS &quot;Total Price&quot; FROM (SELECT E.EVENTID, E.CONTACTLNAME, E.CONTACTFNAME, E.STOREID, CE.NUMBERATTENDEES, CE.COSTPERPLATE, CE.PRICEPERPLATE FROM EVENT E INNER JOIN CATERINGEVENTS CE ON E.EVENTID = CE.EVENTID) CT GROUP BY CONTACTLNAME, CONTACTFNAME, STOREID) CFT INNER JOIN STORES S ON CFT.STOREID = S.STOREID"></asp:SqlDataSource>
 </asp:Content>
 
