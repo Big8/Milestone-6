@@ -40,6 +40,7 @@
                     <Items>
                         <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home"/>
                         <asp:MenuItem Text="Customers" Value="Customers">
+                            <asp:MenuItem NavigateUrl="~/CUSTOMERS/ViewAllCustomers.aspx" Text="View All Customers" Value="View All Customers"></asp:MenuItem>
                             <asp:MenuItem NavigateUrl="~/CUSTOMERS/Dyersville.aspx" Text="Dyersville Store Customer List" Value="Dyersville Store Customer List"></asp:MenuItem>
                             <asp:MenuItem NavigateUrl="~/CUSTOMERS/Lawton.aspx" Text="Lawton Store Customer List" Value="Lawton Store Customer List"></asp:MenuItem>
                             <asp:MenuItem NavigateUrl="~/CUSTOMERS/Catering.aspx" Text="Catering Customers" Value="Catering Customers"></asp:MenuItem>
