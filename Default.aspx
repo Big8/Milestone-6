@@ -10,13 +10,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
-    <h2 class="style1">
-        <strong>Corporation Database Application</strong></h2>
-    <br />
-    <br />
-    <br />
-    <p>
-        &nbsp;</p>
-    <p>
-        &nbsp;</p>
+
+    <h3>Welcome!</h3>
+
 </asp:Content>

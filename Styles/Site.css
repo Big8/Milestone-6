@@ -3,7 +3,7 @@
 
 body   
 {
-    background: #b6b7bc;
+    background:#fbfbd9;
     font-size: .80em;
     font-family: "Helvetica Neue", "Lucida Grande", "Segoe UI", Arial, Helvetica, Verdana, sans-serif;
     margin: 0px;
@@ -41,18 +41,21 @@ p
 h1, h2, h3, h4, h5, h6
 {
     font-size: 1.5em;
-    color: #666666;
-    font-variant: small-caps;
+    color: #fbfbd9;
     text-transform: none;
     font-weight: 200;
     margin-bottom: 0px;
+    text-align:center;
 }
 
 h1
 {
-    font-size: 1.6em;
+    font-size:36pt;
     padding-bottom: 0px;
     margin-bottom: 0px;
+    width:90%;
+    height:100%;
+    color:#fbfbd9;
 }
 
 h2
@@ -64,11 +67,13 @@ h2
 h3
 {
     font-size: 1.2em;
+    color:black;
 }
 
 h4
 {
     font-size: 1.1em;
+    height: 55px;
 }
 
 h5, h6
@@ -100,19 +105,24 @@ first child of the left and right table columns */
     position: relative;
     margin: 0px;
     padding: 0px;
-    background: #4b6c9e;
+    background:#9a2929;
     width: 100%;
+    top: 0px;
+    left: 0px;
 }
 
 .header h1
 {
+    border-style: none;
+    border-color: inherit;
+    border-width: medium;
     font-weight: 700;
     margin: 0px;
     padding: 0px 0px 0px 20px;
-    color: #f9f9f9;
-    border: none;
+    color: #fbfbd9;
     line-height: 2em;
-    font-size: 2em;
+    font-size:24pt;
+
 }
 
 .main
@@ -145,7 +155,7 @@ first child of the left and right table columns */
 
 div.hideSkiplink
 {
-    background-color:#3a4f63;
+    background-color:#4e5766;
     width:100%;
 }
 
@@ -164,9 +174,9 @@ div.menu ul
 
 div.menu ul li a, div.menu ul li a:visited
 {
-    background-color: #465c71;
+    background-color:#4e5766;
     border: 1px #4e667d solid;
-    color: #dde4ec;
+    color: #fbfbd9;
     display: block;
     line-height: 1.35em;
     padding: 4px 20px;
@@ -176,15 +186,15 @@ div.menu ul li a, div.menu ul li a:visited
 
 div.menu ul li a:hover
 {
-    background-color: #bfcbd6;
-    color: #465c71;
+    background-color: #9a2929;
+    color:black;
     text-decoration: none;
 }
 
 div.menu ul li a:active
 {
-    background-color: #465c71;
-    color: #cfdbe6;
+    background-color: #9a2929;;
+    color:black;
     text-decoration: none;
 }
 
@@ -245,14 +255,6 @@ div.accountInfo
     clear: both;
 }
 
-.title
-{
-    display: block;
-    float: left;
-    text-align: left;
-    width: auto;
-}
-
 .loginDisplay
 {
     font-size: 1.1em;
@@ -293,3 +295,37 @@ div.accountInfo
     text-align: right;
     padding-right: 10px;
 }
+
+#title  {
+    display: block;
+    float: left;
+    width:100%;
+    height:200px;
+}
+
+#left_logo {
+    width:29%;
+    float:left;
+    height:100%
+}
+
+#img_GroovyGroundsLogo{
+    height:100%;
+}
+
+#titleText {
+    width:57%;
+    float:left;
+    height:100%
+}
+
+#right_logo {
+    width:14%;
+    float:left;
+    height:100%
+}
+
+#img_StoreFront {
+    height:100%;
+}
+

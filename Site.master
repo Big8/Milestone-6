@@ -10,28 +10,44 @@
 </head>
 <body>
     <form runat="server">
+
     <div class="page">
-        <div class="header">
-            <div class="title">
-                <h1>
-                    Corporation DataBase Application
-                </h1>
-            </div>
-            <div class="loginDisplay">
-            </div>
+
+        <div class="header">            
+
+            <div id="title">
+                
+                <div id="left_logo">
+                   <asp:Image ID="img_GroovyGroundsLogo" runat="server" ImageUrl="~/Styles/Images/GroovyLogo.jpg" AlternateText="Groovy Grounds Logo" /> 
+                </div>
+
+                <div id="titleText">
+                    <h1>Groovy Grounds 
+                        <br />
+                        Coffee House 
+                        <br />
+                        Database Application</h1>
+                </div>
+
+                <div id="right_logo">
+                    <asp:Image ID="img_StoreFront" runat="server" ImageUrl="~/Styles/Images/StoreFront.jpg" AlternateText="Store Front" />
+                </div>
+
+            </div>  <!-- close title div -->            
+
             <div class="clear hideSkiplink">
                 <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
                     <Items>
                         <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home"/>
-                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="About"/>
                         <asp:MenuItem Text="Customers" Value="Customers">
-                            <asp:MenuItem NavigateUrl="~/CUSTOMERS/Dyersville.aspx" Text="Dyersville Store" Value="Dyersville Store"></asp:MenuItem>
-                            <asp:MenuItem NavigateUrl="~/CUSTOMERS/Lawton.aspx" Text="Lawton Store" Value="Lawton Store"></asp:MenuItem>
-                            <asp:MenuItem NavigateUrl="~/CUSTOMERS/Catering.aspx" Text="Catering Customer" Value="Catering Customer"></asp:MenuItem>
-                            <asp:MenuItem NavigateUrl="~/CUSTOMERS/GroovyEvents.aspx" Text="Groovy Events Customer" Value="Groovy Events Customer"></asp:MenuItem>
-                            <asp:MenuItem NavigateUrl="~/CUSTOMERS/LossingCatering.aspx" Text="Lossing Catering Customer" Value="Lossing Catering Customer"></asp:MenuItem>
-                            <asp:MenuItem NavigateUrl="~/CUSTOMERS/LossingGroovy.aspx" Text="Lossing Groovy Events Customer" Value="Lossing Groovy Events Customer"></asp:MenuItem>
-                            <asp:MenuItem NavigateUrl="~/CUSTOMERS/RecentCustomer.aspx" Text="Recent Customer" Value="Recent Customer"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/CUSTOMERS/Dyersville.aspx" Text="Dyersville Store Customer List" Value="Dyersville Store Customer List"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/CUSTOMERS/Lawton.aspx" Text="Lawton Store Customer List" Value="Lawton Store Customer List"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/CUSTOMERS/Catering.aspx" Text="Catering Customers" Value="Catering Customers"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/CUSTOMERS/GroovyEvents.aspx" Text="Groovy Events Customers" Value="Groovy Events Customers"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/CUSTOMERS/LossingCatering.aspx" Text="Non-Returning Catering Customer" Value="Non-Returning Catering Customers"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/CUSTOMERS/LossingGroovy.aspx" Text="Non-Returning Groovy Events Customers" Value="Non-Returning Groovy Events Customers"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/CUSTOMERS/RecentCustomer.aspx" Text="Recent Customers" Value="Recent Customers"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/CUSTOMERS/AddCustomer.aspx" Text="Add New Customer" Value="Add New Customer"></asp:MenuItem>
                         </asp:MenuItem>
                         <asp:MenuItem Text="Product" Value="Product">
                             <asp:MenuItem NavigateUrl="~/PRODUCT/CoffeeDyersville.aspx" Text="Coffee Sold in Dyersville Store" Value="Coffee Sold in Dyersville Store"></asp:MenuItem>
@@ -54,16 +70,22 @@
                     </Items>
                 </asp:Menu>
             </div>
+
         </div>
+
         <div class="main">
             <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
         </div>
+
         <div class="clear">
         </div>
+
     </div>
     <div class="footer">
         
     </div>
+
     </form>
+
 </body>
 </html>
