@@ -7,7 +7,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" Runat="Server">
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Provider=MSDAORA;Data Source=delphi;Password=DataRocks;User ID=MS320076" ProviderName="System.Data.OleDb" SelectCommand="select E.EquipmentID as &quot;Equipment ID&quot;, E.Description as &quot;Description&quot;, E.EquipName as &quot;Equipment Name&quot;, E.LastSerDate as &quot;Previous Service Date&quot;
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" SelectCommand="select E.EquipmentID as &quot;Equipment ID&quot;, E.Description as &quot;Description&quot;, E.EquipName as &quot;Equipment Name&quot;, E.LastSerDate as &quot;Previous Service Date&quot;
 From Equipment E, (select MIN(LastSerDate) as &quot;OldestDate&quot;
                   from Equipment
                   Having Min(LastSerDate)&lt;=(sysdate-180)

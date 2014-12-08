@@ -7,7 +7,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" Runat="Server">
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Provider=MSDAORA;Data Source=delphi;Password=DataRocks;User ID=MS320076" ProviderName="System.Data.OleDb" SelectCommand="SELECT P.PName|| ' - Size:' ||DS.DrinkSize as &quot;Product Name&quot;,BS.&quot;Qty&quot; as &quot;Qty Sold&quot;
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" SelectCommand="SELECT P.PName|| ' - Size:' ||DS.DrinkSize as &quot;Product Name&quot;,BS.&quot;Qty&quot; as &quot;Qty Sold&quot;
 FROM Products P, DrinkSizes DS, (select OD.ProductID, OD.SizeID, SUM(OD.Quantity) as &quot;Qty&quot;
                                 From Orders_Details OD, (SELECT O.OrderID, O.CustID
                                                         FROM Orders O

@@ -7,7 +7,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" Runat="Server">
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Provider=MSDAORA;Data Source=delphi;Password=DataRocks;User ID=MS320076" ProviderName="System.Data.OleDb" SelectCommand="select CU.custid as &quot;Customer ID&quot;, CU.custfirstname as &quot;Customer First Name&quot;, CU.custlastname as &quot;Customer Last Name&quot;, O.orderid as &quot;Order ID&quot;, O.orderdate as &quot;Order Date&quot;
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" SelectCommand="select CU.custid as &quot;Customer ID&quot;, CU.custfirstname as &quot;Customer First Name&quot;, CU.custlastname as &quot;Customer Last Name&quot;, O.orderid as &quot;Order ID&quot;, O.orderdate as &quot;Order Date&quot;
 from customers CU, orders O
 where O.custid=CU.custid
 and O.orderdate &gt;= (sysdate-30)"></asp:SqlDataSource>

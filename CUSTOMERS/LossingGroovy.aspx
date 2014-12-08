@@ -7,7 +7,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" Runat="Server">
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Provider=MSDAORA;Data Source=delphi;Password=DataRocks;User ID=MS320076" ProviderName="System.Data.OleDb" SelectCommand="SELECT GFT.&quot;Customer Name&quot;, S.StoreName as &quot;Store Name&quot;, GFT.&quot;# Groovy Events&quot;, GFT.&quot;Total Cost&quot;, GFT.&quot;Total Price&quot;, (GFT.&quot;Total Price&quot;-GFT.&quot;Total Cost&quot;) as &quot;Total Profit&quot;
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" SelectCommand="SELECT GFT.&quot;Customer Name&quot;, S.StoreName as &quot;Store Name&quot;, GFT.&quot;# Groovy Events&quot;, GFT.&quot;Total Cost&quot;, GFT.&quot;Total Price&quot;, (GFT.&quot;Total Price&quot;-GFT.&quot;Total Cost&quot;) as &quot;Total Profit&quot;
 FROM (SELECT GT.ContactFName|| ' ' ||GT.ContactLName as &quot;Customer Name&quot;, GT.StoreID, Count(*) as &quot;# Groovy Events&quot;, SUM(GT.TotalCost) as &quot;Total Cost&quot;, SUM(GT.TotalPrice) as &quot;Total Price&quot;
       FROM (Select E.EventID, E.ContactLName, E.ContactFName, E.StoreID, GE.TotalCost, GE.TotalPrice
             FROM Event E, GroovyEvents GE

@@ -7,7 +7,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" Runat="Server">
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Provider=MSDAORA;Data Source=delphi;Password=DataRocks;User ID=MS320076" ProviderName="System.Data.OleDb" SelectCommand="SELECT I.IngredName as &quot;Ingredient Name&quot;, R.&quot;TotalQty&quot; as &quot;Most used Ingredients&quot;
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" SelectCommand="SELECT I.IngredName as &quot;Ingredient Name&quot;, R.&quot;TotalQty&quot; as &quot;Most used Ingredients&quot;
 FROM Ingredients I, (Select IngredientID,Sum(IngrQty) as &quot;TotalQty&quot;
                     FROM Recipe 
                     Group By INGREDIENTID

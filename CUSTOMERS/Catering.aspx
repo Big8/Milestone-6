@@ -7,7 +7,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" Runat="Server">
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Provider=MSDAORA;Data Source=delphi;Password=DataRocks;User ID=MS320076" ProviderName="System.Data.OleDb" SelectCommand="SELECT CFT.&quot;Customer Name&quot;, S.StoreName as &quot;Store Name&quot;, CFT.&quot;# Catering Events&quot;, CFT.&quot;Total Cost&quot;, CFT.&quot;Total Price&quot;
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" SelectCommand="SELECT CFT.&quot;Customer Name&quot;, S.StoreName as &quot;Store Name&quot;, CFT.&quot;# Catering Events&quot;, CFT.&quot;Total Cost&quot;, CFT.&quot;Total Price&quot;
 FROM (SELECT CT.ContactFName|| ' ' ||CT.ContactLName as &quot;Customer Name&quot;, CT.StoreID, Count(*) as &quot;# Catering Events&quot;, SUM(CT.NumberAttendees*CT.CostPerPlate) as &quot;Total Cost&quot;, SUM(CT.NumberAttendees*CT.PricePerPlate) as &quot;Total Price&quot;
       FROM (Select E.EventID, E.ContactLName, E.ContactFName, E.StoreID, CE.NumberAttendees, CE.CostPerPlate, CE.PricePerPlate
             FROM Event E, CateringEvents CE

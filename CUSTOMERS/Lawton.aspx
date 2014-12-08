@@ -7,7 +7,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" Runat="Server">
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Provider=MSDAORA;Data Source=delphi;Password=DataRocks;User ID=MS320076" ProviderName="System.Data.OleDb" SelectCommand="SELECT C.CustID AS &quot;Customer ID&quot;, C.CustFirstName|| ' ' ||C.CustLastName AS &quot;Customer Name&quot;, SUM.&quot;CustomerTotal&quot; as &quot;Customer Total&quot;
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" SelectCommand="SELECT C.CustID AS &quot;Customer ID&quot;, C.CustFirstName|| ' ' ||C.CustLastName AS &quot;Customer Name&quot;, SUM.&quot;CustomerTotal&quot; as &quot;Customer Total&quot;
 FROM Customers C, 
     (select Sum(O.TotalPrice) as &quot;CustomerTotal&quot; ,O.CustID
     From Orders O
