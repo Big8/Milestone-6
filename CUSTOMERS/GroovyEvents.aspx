@@ -37,5 +37,13 @@ WHERE S.StoreID=GFT.StoreID"></asp:SqlDataSource>
         <SortedDescendingCellStyle BackColor="#FFFDF8" />
         <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
     </asp:GridView>
+
+    <br />
+    <br />
+
+    <p style="text-align:left; color:#0B3861;">
+        The table shows the number of Groovy Events each unique customer name has had, the store that performed the event, and the relating data. Customer can go between two stores, and would be counted twice.
+    </p>
+
 </asp:Content>
 

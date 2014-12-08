@@ -127,6 +127,7 @@ first child of the left and right table columns */
 
 .main
 {
+    text-align:center;
     padding: 0px 12px;
     margin: 12px 8px 8px 48px;
     min-height: 420px;
@@ -161,6 +162,7 @@ div.hideSkiplink
 
 div.menu
 {
+    text-align:center;
     padding: 4px 0px 4px 8px;
 }
 

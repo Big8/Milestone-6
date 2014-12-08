@@ -38,5 +38,12 @@ WHERE S.StoreID=CFT.StoreID"></asp:SqlDataSource>
         <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
 </asp:GridView>
 
+    <br />
+    <br />
+
+    <p style="text-align:left; color:#0B3861;">
+        This table shows the total number of catering events, total cost to Groovy to put on the events, and total price charged to customer over ALL events, by customer and store.
+    </p>
+
 </asp:Content>
 

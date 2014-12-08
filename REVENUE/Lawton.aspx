@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="VB" MasterPageFile="~/Site.master" %>
+﻿<%@ Page Title="Lawton Store's Monthly Revenue" Language="VB" MasterPageFile="~/Site.master" %>
 
 <script runat="server">
 
@@ -148,5 +148,13 @@ From (SELECT Sum(Jan.TotalPrice) as &quot;Jan. Total&quot;
         <SortedDescendingCellStyle BackColor="#FFFDF8" />
         <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
     </asp:GridView>
+
+    <br />
+    <br />
+
+    <p style="text-align:left; color:#0B3861;">
+        This table shows the monthly revenue of the Lawton store.
+    </p>
+
 </asp:Content>
 

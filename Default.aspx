@@ -11,6 +11,9 @@
 </asp:Content>
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
 
-    <h3>Welcome!</h3>
+    <h3 style="color:#0B3861;">Welcome to our website!</h3>
+    <p>
+        <img src="Styles/Images/DiningArea.jpg" style="height: 661px; width: 860px; margin-top: 5px" />
+    </p>
 
 </asp:Content>

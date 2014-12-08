@@ -32,5 +32,13 @@ WHERE E.LastSerDate=ES.&quot;OldestDate&quot;"></asp:SqlDataSource>
         <SortedDescendingCellStyle BackColor="#FFFDF8" />
         <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
     </asp:GridView>
+
+    <br />
+    <br />
+
+    <p style="text-align:left; color:#0B3861;">
+        This table shows the previous service date of the equipment.
+    </p>
+
 </asp:Content>
 

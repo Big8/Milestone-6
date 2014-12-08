@@ -34,5 +34,13 @@ WHERE SUM.CustID=C.CustID"></asp:SqlDataSource>
         <SortedDescendingCellStyle BackColor="#FFFDF8" />
         <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
     </asp:GridView>
+
+    <br />
+    <br />
+
+    <p style="text-align:left; color:#0B3861;">
+        This table shows the totals per customer, and lists them in descending order, only for Store 1002 AKA Lawton store
+    </p>
+
 </asp:Content>
 

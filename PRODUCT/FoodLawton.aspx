@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="VB" MasterPageFile="~/Site.master" %>
+﻿<%@ Page Title="Food Sold in Lawton Store" Language="VB" MasterPageFile="~/Site.master" %>
 
 <script runat="server">
 
@@ -35,5 +35,13 @@ ORDER BY &quot;Qty Sold&quot; Desc"></asp:SqlDataSource>
         <SortedDescendingCellStyle BackColor="#FFFDF8" />
         <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
     </asp:GridView>
+
+    <br />
+    <br />
+
+    <p style="text-align:left; color:#0B3861;">
+        This table shows the most frequently sold food items for the Lawton store.
+    </p>
+
 </asp:Content>
 

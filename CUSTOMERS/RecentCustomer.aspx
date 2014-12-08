@@ -31,5 +31,13 @@ and O.orderdate &gt;= (sysdate-30)"></asp:SqlDataSource>
         <SortedDescendingCellStyle BackColor="#FFFDF8" />
         <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
     </asp:GridView>
+
+    <br />
+    <br />
+
+    <p style="text-align:left; color:#0B3861;">
+        This table shows customers who have visited Groovy within 30 days.
+    </p>
+
 </asp:Content>
 

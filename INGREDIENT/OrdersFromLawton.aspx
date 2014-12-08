@@ -39,5 +39,13 @@ WHERE I.INGREDIENTID=DI.IngredientID"></asp:SqlDataSource>
         <SortedDescendingCellStyle BackColor="#FFFDF8" />
         <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
     </asp:GridView>
+
+    <br />
+    <br />
+
+    <p style="text-align:left; color:#0B3861;">
+        This table shows summed demand for each ingredient at the Lawton store.
+    </p>
+
 </asp:Content>
 

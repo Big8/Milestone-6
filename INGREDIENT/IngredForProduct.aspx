@@ -31,5 +31,13 @@ WHERE I.INGREDIENTID=R.IngredientID"></asp:SqlDataSource>
         <SortedDescendingCellStyle BackColor="#FFFDF8" />
         <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
     </asp:GridView>
+
+    <br />
+    <br />
+
+    <p style="text-align:left; color:#0B3861;">
+        The table shows the ingredient name and the total SUM of the menu demand for each ingredient.
+    </p>
+
 </asp:Content>
 

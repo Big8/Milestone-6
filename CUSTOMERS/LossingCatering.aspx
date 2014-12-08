@@ -37,5 +37,17 @@ WHERE S.StoreID=CFT.StoreID"></asp:SqlDataSource>
         <SortedDescendingCellStyle BackColor="#FFFDF8" />
         <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
     </asp:GridView>
+
+    <br />
+    <br />
+
+    <p style="text-align:left; color:#0B3861;">
+        This table shows the total number of catering events, total cost to Groovy to put on the events, and total price charged to customer over ALL events, by customer and store. 
+    </p>
+
+    <p style="text-align:left; color:#0B3861;">
+        This table identify customers that have between 1 and 5 previous events, further than 3 weeks ago. Doing this allows us to identify customers that have tried our services, but haven't continued using them, allowing us to re-engage the customer with coupons and such.
+    </p>
+
 </asp:Content>
 
