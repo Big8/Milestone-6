@@ -20,7 +20,7 @@ FROM Customers C,
     ) SUM
 WHERE SUM.CustID=C.CustID"></asp:SqlDataSource>
 
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None">
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" AllowPaging="True">
         <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
         <Columns>
             <asp:BoundField DataField="Customer ID" HeaderText="Customer ID" SortExpression="Customer ID" />

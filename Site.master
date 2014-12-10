@@ -39,6 +39,7 @@
                 <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
                     <Items>
                         <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home"/>
+                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="About" Value="About"></asp:MenuItem>
                         <asp:MenuItem Text="Customers" Value="Customers">
                             <asp:MenuItem NavigateUrl="~/CUSTOMERS/ViewAllCustomers.aspx" Text="View All Customers" Value="View All Customers"></asp:MenuItem>
                             <asp:MenuItem NavigateUrl="~/CUSTOMERS/Dyersville.aspx" Text="Dyersville Store Customer List" Value="Dyersville Store Customer List"></asp:MenuItem>
@@ -68,6 +69,33 @@
                             <asp:MenuItem NavigateUrl="~/REVENUE/Lawton.aspx" Text="Lawton Store" Value="Lawton Store"></asp:MenuItem>
                         </asp:MenuItem>
                         <asp:MenuItem NavigateUrl="~/EQUIPMENT/Equipment.aspx" Text="Equipment" Value="Equipment"></asp:MenuItem>
+                        <asp:MenuItem Text="Database Tables" Value="Database Tables">
+                            <asp:MenuItem NavigateUrl="~/TABLES/Baristas.aspx" Text="Baristas" Value="Baristas"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/TABLES/Cashiers.aspx" Text="Cashiers" Value="Cashiers"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/TABLES/CateringEvents.aspx" Text="Catering Events" Value="Catering Events"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/TABLES/CustomerPhone.aspx" Text="Customer Phone" Value="Customer Phone"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/TABLES/Customers.aspx" Text="Customers" Value="Customers"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/TABLES/DiningMaterials.aspx" Text="Dining Materials" Value="Dining Materials"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/TABLES/DrinkPrices.aspx" Text="Drink Prices" Value="Drink Prices"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/TABLES/DrinkSizes.aspx" Text="Drink Sizes" Value="Drink Sizes"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/TABLES/Employees.aspx" Text="Employees" Value="Employees"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/TABLES/Equipment.aspx" Text="Equipment" Value="Equipment"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/TABLES/Event.aspx" Text="Event" Value="Event"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/TABLES/EventsContactPhone.aspx" Text="Events Contact Phone" Value="Events Contact Phone"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/TABLES/Food.aspx" Text="Food" Value="Food"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/TABLES/GroovyEvents.aspx" Text="Groovy Events" Value="Groovy Events"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/TABLES/Ingredients.aspx" Text="Ingredients" Value="Ingredients"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/TABLES/JobDetail.aspx" Text="Job Details" Value="Job Details"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/TABLES/Managers.aspx" Text="Managers" Value="Managers"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/TABLES/MenuCategories.aspx" Text="Menu Categories" Value="Menu Categories"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/TABLES/Merchandise.aspx" Text="Merchandise" Value="Merchandise"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/TABLES/Orders.aspx" Text="Orders" Value="Orders"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/TABLES/OrdersDetails.aspx" Text="Orders Details" Value="Orders Details"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/TABLES/Products.aspx" Text="Products" Value="Products"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/TABLES/Recipe.aspx" Text="Recipe" Value="Recipe"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/TABLES/ShiftDetails.aspx" Text="Shift Details" Value="Shift Details"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/TABLES/Stores.aspx" Text="Stores" Value="Stores"></asp:MenuItem>
+                        </asp:MenuItem>
                     </Items>
                 </asp:Menu>
             </div>

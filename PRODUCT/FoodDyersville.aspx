@@ -18,7 +18,7 @@ FROM Products P, (select OD.ProductID, OD.SizeID, SUM(OD.Quantity) as &quot;Qty&
                   ) BS
 WHERE P.ProductID=BS.ProductID AND BS.SizeID IS NULL
 ORDER BY &quot;Qty Sold&quot; Desc"></asp:SqlDataSource>
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None">
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" AllowPaging="True">
         <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
         <Columns>
             <asp:BoundField DataField="Product Name" HeaderText="Product Name" SortExpression="Product Name" />

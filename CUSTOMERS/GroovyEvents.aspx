@@ -16,7 +16,7 @@ FROM (SELECT GT.ContactFName|| ' ' ||GT.ContactLName as &quot;Customer Name&quot
       Group By GT.ContactLName, GT.ContactFName, GT.StoreID
       ) GFT, Stores S
 WHERE S.StoreID=GFT.StoreID"></asp:SqlDataSource>
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None">
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" AllowPaging="True">
         <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
         <Columns>
             <asp:BoundField DataField="Customer Name" HeaderText="Customer Name" SortExpression="Customer Name" />

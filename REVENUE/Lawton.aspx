@@ -121,7 +121,7 @@ From (SELECT Sum(Jan.TotalPrice) as &quot;Jan. Total&quot;
                   AND O.StoreID='1002'
                   ) Dec
     ) DecT"></asp:SqlDataSource>
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None">
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" AllowPaging="True">
         <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
         <Columns>
             <asp:BoundField DataField="Jan. Total" HeaderText="Jan. Total" SortExpression="Jan. Total" />

@@ -14,7 +14,7 @@ FROM Ingredients I, (Select IngredientID,Sum(IngrQty) as &quot;TotalQty&quot;
                     Order By &quot;TotalQty&quot; Desc
                     ) R
 WHERE I.INGREDIENTID=R.IngredientID"></asp:SqlDataSource>
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None">
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" AllowPaging="True">
         <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
         <Columns>
             <asp:BoundField DataField="Ingredient Name" HeaderText="Ingredient Name" SortExpression="Ingredient Name" />

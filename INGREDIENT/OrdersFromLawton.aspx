@@ -22,7 +22,7 @@ FROM Ingredients I, (SELECT R.IngredientID, Sum(R.IngrQty*D.&quot;Qty&quot;) as 
                     Order By &quot;IngrAmtDemanded&quot; Desc
                     ) DI
 WHERE I.INGREDIENTID=DI.IngredientID"></asp:SqlDataSource>
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None">
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" AllowPaging="True">
         <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
         <Columns>
             <asp:BoundField DataField="Ingredient Name" HeaderText="Ingredient Name" SortExpression="Ingredient Name" />

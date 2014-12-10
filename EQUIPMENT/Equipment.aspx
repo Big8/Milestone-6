@@ -13,7 +13,7 @@ From Equipment E, (select MIN(LastSerDate) as &quot;OldestDate&quot;
                   Having Min(LastSerDate)&lt;=(sysdate-180)
                   ) ES
 WHERE E.LastSerDate=ES.&quot;OldestDate&quot;"></asp:SqlDataSource>
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None">
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" AllowPaging="True">
         <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
         <Columns>
             <asp:BoundField DataField="Equipment ID" HeaderText="Equipment ID" SortExpression="Equipment ID" />

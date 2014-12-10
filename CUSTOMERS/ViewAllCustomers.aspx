@@ -40,7 +40,7 @@
             <asp:BoundField DataField="CUSTLASTNAME" HeaderText="Last Name" SortExpression="CUSTLASTNAME" />
             <asp:BoundField DataField="CUSTEMAIL" HeaderText="Email" SortExpression="CUSTEMAIL" />
             <asp:BoundField DataField="DATEOFBIRTH" DataFormatString="{0:MM/dd/yyyy}" HeaderText="Date of Birth" SortExpression="DATEOFBIRTH" />
-            <asp:CommandField ShowEditButton="True" />
+            <asp:CommandField ShowEditButton="True" ShowDeleteButton="True" />
         </Columns>
         <EditRowStyle BackColor="#999999" />
         <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
